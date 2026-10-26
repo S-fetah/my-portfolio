@@ -1,7 +1,7 @@
 /* Central content source — update copy/data here instead of hunting through JSX.
 
    Content policy: every claim below is backed by a verifiable artifact —
-   the CV (src/assets/Fettah_Safi_CV_ATS_v3.pdf), local project source code,
+   the CV (src/assets/Safiddine-Abdelfetah.pdf), local project source code,
    public GitHub repos, or the live production systems themselves.
    Anything not verifiable is either omitted or explicitly labelled
    (e.g. "concept", "in development", "not published here"). */
