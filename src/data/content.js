@@ -3,8 +3,10 @@
    public repositories, or the dissertation. Project maturity is labelled
    honestly; confidential employer details are intentionally omitted. */
 
+export const PRODUCTION_URL = "https://www.abdelfetah-safiddine.com";
+
 export const SITE = {
-  url: "https://www.abdelfetah-safiddine.com",
+  url: PRODUCTION_URL,
   name: "Abdelfetah Safiddine",
   title: "Backend Lead Developer & Full-Stack Engineer",
   description:

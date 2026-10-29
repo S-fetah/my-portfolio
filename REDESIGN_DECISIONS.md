@@ -67,7 +67,7 @@ Previously, deep case studies existed only inside ephemeral modal dialogs withou
 To guarantee optimal SEO, crawlability, and social sharing:
 1. `postbuild.mjs` generates pre-rendered `index.html` files for `/work/fennec-booking` and `/work/saha-mind`.
 2. Each route injects customized Open Graph tags, Twitter cards, canonical link headers, and JSON-LD structured data (`Person`, `WebSite`, and `TechArticle`).
-3. An XML sitemap (`public/sitemap.xml`) is compiled with canonical URLs pointing to `https://myportfolio-nu-bay.vercel.app`.
+3. An XML sitemap (`public/sitemap.xml`) is compiled with canonical URLs pointing to `https://www.abdelfetah-safiddine.com`.
 
 ---
 

@@ -1,25 +1,25 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "abdelfetah-safiddine.com"
         }
       ],
-      "destination": "https://www.abdelfetah-safiddine.com/:path*",
+      "destination": "https://www.abdelfetah-safiddine.com/$1",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "myportfolio-nu-bay.vercel.app"
         }
       ],
-      "destination": "https://www.abdelfetah-safiddine.com/:path*",
+      "destination": "https://www.abdelfetah-safiddine.com/$1",
       "permanent": true
     }
   ],

@@ -1,12 +1,24 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { FEATURED_PROJECTS, PROFILE, SITE, SOCIALS } from "../src/data/content.js";
+import { FEATURED_PROJECTS, PROFILE, PRODUCTION_URL, SITE, SOCIALS } from "../src/data/content.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const PUBLIC = path.join(ROOT, "public");
-const SITE_URL = (process.env.VITE_SITE_URL || SITE.url).replace(/\/+$/, "");
+
+// Ensure production domain is always used in production builds, preventing staging/preview domain leak into canonicals or sitemap
+const configuredUrl =
+  process.env.VITE_SITE_URL && !process.env.VITE_SITE_URL.includes("vercel.app")
+    ? process.env.VITE_SITE_URL
+    : PRODUCTION_URL || SITE.url;
+
+const SITE_URL = configuredUrl.replace(/\/+$/, "");
+
+if (SITE_URL.includes("vercel.app")) {
+  throw new Error(`CRITICAL SEO ERROR: SITE_URL cannot be a vercel.app domain! Detected: ${SITE_URL}`);
+}
+
 const BUILT = new Date().toISOString().slice(0, 10);
 
 const escapeHtml = (value) =>
@@ -294,6 +306,9 @@ ${urls
   .join("\n")}
 </urlset>
 `;
+  if (sitemap.includes("vercel.app")) {
+    throw new Error("CRITICAL SEO ERROR: sitemap.xml contains a vercel.app reference!");
+  }
   await writeFile(path.join(DIST, "sitemap.xml"), sitemap, "utf8");
   await writeFile(path.join(PUBLIC, "sitemap.xml"), sitemap, "utf8");
 
@@ -303,6 +318,9 @@ Disallow: /404
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
+  if (robots.includes("vercel.app")) {
+    throw new Error("CRITICAL SEO ERROR: robots.txt contains a vercel.app reference!");
+  }
   await writeFile(path.join(DIST, "robots.txt"), robots, "utf8");
   await writeFile(path.join(PUBLIC, "robots.txt"), robots, "utf8");
 

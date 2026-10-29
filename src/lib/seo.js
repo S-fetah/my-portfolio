@@ -1,9 +1,13 @@
-import { FEATURED_PROJECTS, PROFILE, SITE, SOCIALS } from "../data/content";
+import { FEATURED_PROJECTS, PROFILE, PRODUCTION_URL, SITE, SOCIALS } from "../data/content";
 
+// Always prioritize the official custom production domain. If VITE_SITE_URL is injected,
+// ensure it never falls back to or leaks a staging/vercel.app URL into canonicals.
 const configuredUrl =
-  typeof import.meta !== "undefined" && import.meta.env?.VITE_SITE_URL
+  typeof import.meta !== "undefined" &&
+  import.meta.env?.VITE_SITE_URL &&
+  !import.meta.env.VITE_SITE_URL.includes("vercel.app")
     ? import.meta.env.VITE_SITE_URL
-    : SITE.url;
+    : PRODUCTION_URL || SITE.url;
 
 export const SITE_URL = configuredUrl.replace(/\/+$/, "");
 
