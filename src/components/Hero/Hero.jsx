@@ -41,7 +41,7 @@ function Hero() {
 
             <p className={styles.role}>
               {PROFILE.title}
-              <span aria-hidden="true"> / </span>
+              <span aria-hidden="true" className={styles.roleDivider}> | </span>
               {PROFILE.secondaryTitle}
             </p>
 

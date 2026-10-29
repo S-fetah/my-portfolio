@@ -19,13 +19,13 @@ PUBLIC = ROOT / "public"
 OUT.mkdir(parents=True, exist_ok=True)
 
 W, H = 1200, 630
-PAPER = "#f4f0e8"
-INK = "#191713"
-MUTED = "#6d685d"
-COPPER = "#9a3f1b"
-LINE = "#d1c9ba"
-DARK = "#171510"
-COPPER_LIGHT = "#e8a077"
+PAPER = "#F7F7F4"
+INK = "#191D1B"
+MUTED = "#818A84"
+COPPER = "#A65F43"
+LINE = "#E3E6E0"
+DARK = "#111513"
+COPPER_LIGHT = "#D18A68"
 
 FONT_DIRS = [Path("C:/Windows/Fonts"), Path("/usr/share/fonts/truetype")]
 

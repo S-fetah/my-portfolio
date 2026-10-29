@@ -22,7 +22,7 @@ const WIDTHS = {
 };
 
 const HEIGHTS = {
-  profile: [480, 800],
+  profile: [600, 1000],
   fmdStore: [596, 993],
   library: [480, 880],
   printerLibrary: [320, 640],

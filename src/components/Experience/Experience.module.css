@@ -3,8 +3,10 @@
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(32px, 5vw, 64px);
   padding: clamp(24px, 4vw, 40px);
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 14px);
   background: var(--surface);
+  box-shadow: 0 4px 24px -12px rgba(0, 0, 0, 0.06);
 }
 
 .flagshipMeta {

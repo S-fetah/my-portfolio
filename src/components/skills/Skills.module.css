@@ -1,7 +1,7 @@
 .matrix {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  border-top: 1px solid var(--border-strong);
+  border-top: 1px solid var(--border);
 }
 
 .group {

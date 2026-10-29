@@ -8,7 +8,9 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 14px);
+  overflow: hidden;
   background: var(--surface);
   transition:
     border-color var(--transition-base),
@@ -16,8 +18,8 @@
 }
 
 .featured:hover {
-  border-color: var(--text-muted);
-  box-shadow: var(--shadow-soft);
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 32px -12px rgba(0, 0, 0, 0.08);
 }
 
 .coverLink {
@@ -99,9 +101,10 @@
   bottom: -24%;
   width: 52%;
   padding: 5px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   background: var(--surface);
-  box-shadow: -18px 18px 0 -8px var(--surface-3);
+  box-shadow: -12px 12px 24px -8px rgba(0, 0, 0, 0.12);
   transform: rotate(-3deg);
   transition: transform var(--duration-slow) var(--ease-out);
 }
@@ -318,12 +321,17 @@
   height: 100%;
   flex-direction: column;
   border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 14px);
+  overflow: hidden;
   background: var(--surface);
-  transition: border-color var(--transition-base);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .selected:hover {
   border-color: var(--border-strong);
+  box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.08);
 }
 
 .selectedVisual {

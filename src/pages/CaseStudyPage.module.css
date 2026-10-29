@@ -41,14 +41,14 @@
 /* Hero ------------------------------------------------------------------ */
 
 .hero {
-  padding: clamp(48px, 7vw, 96px) 0 clamp(40px, 5vw, 64px);
-  border-bottom: 1px solid var(--border-strong);
+  padding: clamp(40px, 5vw, 72px) 0 clamp(32px, 4vw, 56px);
+  border-bottom: 1px solid var(--border);
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: clamp(36px, 5vw, 72px);
+  gap: clamp(32px, 4vw, 56px);
   align-items: end;
 }
 
@@ -67,9 +67,9 @@
 
 .heroMain h1 {
   margin-top: var(--space-4);
-  font-size: clamp(3rem, 8.5vw, 6.4rem);
-  line-height: 0.92;
-  letter-spacing: -0.05em;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   overflow-wrap: break-word;
 }
 
@@ -94,6 +94,7 @@
   min-width: 0;
   padding: var(--space-5);
   border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   background: var(--surface);
 }
 
@@ -361,6 +362,8 @@
 .figure {
   margin: var(--space-6) 0 0;
   border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
   background: var(--surface);
 }
 

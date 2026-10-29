@@ -1,5 +1,5 @@
 .hero {
-  padding: clamp(36px, 5vw, 64px) var(--gutter) 0;
+  padding: clamp(24px, 3.5vw, 48px) var(--gutter) 0;
 }
 
 .inner {
@@ -36,9 +36,9 @@
 .grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: clamp(36px, 5vw, 72px);
-  align-items: end;
-  padding: clamp(48px, 7vw, 96px) 0 clamp(44px, 6vw, 88px);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+  padding: clamp(28px, 4vw, 64px) 0 clamp(24px, 3.5vw, 52px);
 }
 
 .copy {
@@ -123,7 +123,7 @@
   min-height: 48px;
   padding: 0 var(--space-5);
   border: 1px solid transparent;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-sm);
   font-size: var(--text-sm);
   font-weight: 700;
   text-decoration: none;
@@ -153,13 +153,13 @@
 }
 
 .secondary {
-  border-color: var(--border-strong);
+  border-color: var(--border);
   color: var(--text);
 }
 
 .secondary:hover {
   background: var(--surface-2);
-  border-color: var(--text);
+  border-color: var(--border-strong);
 }
 
 .cvLink {
@@ -229,22 +229,24 @@
 }
 
 .figure {
-  max-width: 380px;
-  margin: 0;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 .imageFrame {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-profile, 16px);
   background: var(--surface-2);
+  box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.08);
 }
 
 .imageFrame::after {
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   content: "";
   pointer-events: none;
 }
@@ -254,8 +256,13 @@
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: 50% 35%;
-  filter: saturate(0.9);
+  object-position: 50% 25%;
+  border-radius: inherit;
+  transition: transform var(--transition-base);
+}
+
+.figure:hover .imageFrame img {
+  transform: scale(1.02);
 }
 
 .caption {
@@ -357,19 +364,36 @@
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .grid {
-    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
     align-items: center;
-  }
-
-  .eyebrow {
-    margin-bottom: var(--space-8);
+    gap: clamp(28px, 3.5vw, 56px);
   }
 
   .portrait {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .figure {
+    max-width: 340px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+    gap: clamp(36px, 5vw, 72px);
+  }
+
+  .figure {
+    max-width: 380px;
+  }
+
+  .eyebrow {
+    margin-bottom: var(--space-8);
   }
 
   .proof {

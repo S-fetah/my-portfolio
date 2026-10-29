@@ -142,7 +142,7 @@ ol {
 }
 
 .section {
-  padding-block: clamp(72px, 9vw, 128px);
+  padding-block: clamp(48px, 6vw, 104px);
   padding-inline: var(--gutter);
   border-top: 1px solid var(--border);
 }

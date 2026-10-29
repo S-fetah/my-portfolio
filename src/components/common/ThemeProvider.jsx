@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { ThemeContext } from "./ThemeContext";
 
 const THEME_COLORS = {
-  light: "#f4f0e8",
-  dark: "#0f0e0b",
+  light: "#F7F7F4",
+  dark: "#111513",
 };
 
 function getInitialTheme() {

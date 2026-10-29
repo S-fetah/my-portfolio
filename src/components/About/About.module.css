@@ -118,6 +118,7 @@
   margin: 0;
   padding: var(--space-5);
   border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   background: var(--surface);
 }
 
@@ -141,10 +142,11 @@
   line-height: 1.4;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .grid {
-    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
     align-items: start;
+    gap: clamp(32px, 4.5vw, 64px);
   }
 
   .aside {
