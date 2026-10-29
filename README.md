@@ -1,10 +1,10 @@
-# Safiddine Abdelfetah — Engineering Portfolio
+# Abdelfetah Safiddine — Engineering Portfolio
 
-Personal portfolio and technical case-study platform of **Safiddine Abdelfetah**, Backend Lead Developer and Full-Stack Engineer.
+Personal portfolio and technical case-study platform of **Abdelfetah Safiddine**, Backend Lead Developer and Full-Stack Engineer.
 
-Built with React 18, Vite 5, CSS Modules, and static site pre-rendering. Designed with an editorial aesthetic ("Premium Editorial Engineering") focusing on backend system architecture, API orchestration, and AI research.
+Built with React 18, Vite 5, CSS Modules, and static site pre-rendering. Designed with an editorial aesthetic ("Warm Editorial Technology") focusing on backend system architecture, API orchestration, and AI research.
 
-🌐 **Live URL**: [https://myportfolio-nu-bay.vercel.app](https://myportfolio-nu-bay.vercel.app)
+🌐 **Live URL**: [https://www.abdelfetah-safiddine.com](https://www.abdelfetah-safiddine.com)
 
 ---
 
@@ -12,8 +12,8 @@ Built with React 18, Vite 5, CSS Modules, and static site pre-rendering. Designe
 
 - **Editorial Typography & Visual Hierarchy**: Self-hosted variable typography (`Newsreader` serif, `Manrope` sans-serif, and `IBM Plex Mono`) paired with a warm paper canvas, near-black ink, and a warm copper accent.
 - **Deep Technical Case Studies**: Shareable, crawlable routes for flagship projects:
-  - [`/work/fennec-booking`](https://myportfolio-nu-bay.vercel.app/work/fennec-booking): Production travel commerce backend (sanitized per NDA), API orchestration, booking workflows, and high-availability database architecture.
-  - [`/work/saha-mind`](https://myportfolio-nu-bay.vercel.app/work/saha-mind): Academic master's thesis on multi-agent LLM psychiatric triage with LoRA fine-tuning benchmarks and safety arbitration.
+  - [`/work/fennec-booking`](https://www.abdelfetah-safiddine.com/work/fennec-booking): Production travel commerce backend (sanitized per NDA), API orchestration, booking workflows, and high-availability database architecture.
+  - [`/work/saha-mind`](https://www.abdelfetah-safiddine.com/work/saha-mind): Academic master's thesis on multi-agent LLM psychiatric triage with LoRA fine-tuning benchmarks and safety arbitration.
 - **Responsive Architecture**: Zero horizontal layout overflow across all screen sizes (360px to 1920px+). Responsive SVG system diagrams and auto-wrapping content grids.
 - **Optimized Asset Pipeline**: 85%+ reduction in asset transfer weight through responsive dual-resolution AVIF and WebP images with intrinsic aspect ratios to prevent layout shift.
 - **Accessibility & Standards**: Full keyboard navigation support, high-contrast `:focus-visible` rings, top-level skip link, accessible dialog focus trapping, and strict compliance with `prefers-reduced-motion`.
@@ -117,6 +117,8 @@ npm run og
 
 ---
 
-## License
+## Copyright & Ownership
 
-This project is open-source under the MIT License. Personal assets, project case studies, and biographical text are proprietary to Safiddine Abdelfetah.
+© 2024–2026 Abdelfetah Safiddine. All rights reserved.
+
+This repository contains the personal portfolio, engineering case studies, biographical information, and creative assets of Abdelfetah Safiddine. It is personal property and is not licensed for open-source reuse, redistribution, or commercial use.
