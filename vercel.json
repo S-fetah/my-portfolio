@@ -1,4 +1,28 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "abdelfetah-safiddine.com"
+        }
+      ],
+      "destination": "https://www.abdelfetah-safiddine.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "myportfolio-nu-bay.vercel.app"
+        }
+      ],
+      "destination": "https://www.abdelfetah-safiddine.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/work/fennec-booking",
@@ -15,6 +39,25 @@
     {
       "source": "/work/saha-mind/",
       "destination": "/work/saha-mind/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
     }
   ]
 }

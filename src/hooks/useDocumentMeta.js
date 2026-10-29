@@ -44,9 +44,11 @@ export function useDocumentMeta(meta) {
     upsertMeta("property", "og:image:alt", meta.imageAlt);
     upsertMeta("property", "og:image:width", "1200");
     upsertMeta("property", "og:image:height", "630");
-    upsertMeta("property", "og:site_name", "Safiddine Abdelfetah");
+    upsertMeta("property", "og:site_name", "Abdelfetah Safiddine");
     upsertMeta("name", "robots", meta.noindex ? "noindex, nofollow" : "index, follow");
     upsertMeta("name", "twitter:card", "summary_large_image");
+    upsertMeta("name", "twitter:site", "@abdelfetah78");
+    upsertMeta("name", "twitter:creator", "@abdelfetah78");
     upsertMeta("name", "twitter:title", meta.title);
     upsertMeta("name", "twitter:description", meta.description);
     upsertMeta("name", "twitter:image", meta.image);

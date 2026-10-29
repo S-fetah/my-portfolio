@@ -4,33 +4,33 @@
    honestly; confidential employer details are intentionally omitted. */
 
 export const SITE = {
-  url: "https://myportfolio-nu-bay.vercel.app",
-  name: "Safiddine Abdelfetah",
+  url: "https://www.abdelfetah-safiddine.com",
+  name: "Abdelfetah Safiddine",
   title: "Backend Lead Developer & Full-Stack Engineer",
   description:
-    "Safiddine Abdelfetah is a Backend Lead Developer and Full-Stack Engineer in Médéa, Algeria. He builds production backends, multi-provider integrations, and full-stack products — with applied LLM research from his Master's dissertation.",
+    "Abdelfetah Safiddine is a Backend Lead Developer and Full-Stack Engineer specializing in Node.js, TypeScript, API architecture, and modern web applications.",
   ogImage: "/og/home.png",
 };
 
 export const PROFILE = {
-  name: "Safiddine Abdelfetah",
-  firstName: "Safiddine",
-  lastName: "Abdelfetah",
+  name: "Abdelfetah Safiddine",
+  firstName: "Abdelfetah",
+  lastName: "Safiddine",
   title: "Backend Lead Developer",
   secondaryTitle: "Full-Stack Engineer",
-  roleLine: "Backend Lead Developer · Full-Stack Engineer",
+  roleLine: "Backend Lead Developer | Full-Stack Engineer",
   location: "Médéa, Algeria",
   timezone: "UTC+1",
   phone: "+213 659 235 442",
   email: "fettahsafi.6@gmail.com",
   availability: "Open to backend & full-stack roles",
   valueProp:
-    "I build the systems behind real products: production backends, multi-provider integrations, and full-stack applications that hold up under load, failure, and change.",
+    "I build the systems behind real products: production backends, multi-provider API integrations, and full-stack applications with Node.js, TypeScript, and modern data architectures.",
   shortBio:
-    "Backend Lead Developer at Fennec Booking, where I run the production backend of a multi-vertical travel commerce platform. Master's research in applied LLM systems.",
+    "Backend Lead Developer at Fennec Booking specializing in Node.js, TypeScript, and API architecture. Master's research in applied LLM systems.",
   about: [
     "I care about the part of software that has to keep working: the data model, the integration boundary, the retry path, the payment that must reconcile. At Fennec Booking I lead the backend behind a travel platform that sells across eight verticals through one API, connecting external suppliers to unified booking, pricing, payment, and support workflows.",
-    "My background spans the full stack — React and React Native clients, Node.js and FastAPI services, PostgreSQL, Redis, and Docker — alongside applied AI research. My Master's dissertation designed a four-agent LLM pipeline for psychological assessment, evaluated on 1,000 clinical queries. I am most useful where the model, the API, and the interface have to agree.",
+    "My background spans the full stack — React and React Native clients, Node.js and FastAPI services, TypeScript, PostgreSQL, Redis, and Docker — alongside applied AI research. My Master's dissertation designed a four-agent LLM pipeline for psychological assessment, evaluated on 1,000 clinical queries. I am most useful where the model, the API, and the interface have to agree.",
   ],
   principles: [
     {
@@ -317,7 +317,7 @@ export const FEATURED_PROJECTS = [
     coverType: "fennec",
     metaTitle: "Fennec Booking — Travel Commerce Backend Case Study",
     metaDescription:
-      "How Safiddine Abdelfetah leads the production backend of Fennec Booking: eight travel verticals, multi-provider integration, SATIM payments, real-time support, and resilient booking fulfilment.",
+      "How Abdelfetah Safiddine leads the production backend of Fennec Booking: eight travel verticals, multi-provider integration, SATIM payments, real-time support, and resilient booking fulfilment.",
     ogImage: "/og/fennec-booking.png",
     outcomes: [
       "Eight travel verticals served through one backend API.",
@@ -429,7 +429,7 @@ export const FEATURED_PROJECTS = [
     coverType: "saha",
     metaTitle: "Saha Mind — LLM Agent Research Case Study",
     metaDescription:
-      "Saha Mind: a Master's dissertation using a four-agent LLM pipeline — LoRA, RAG, DistilBERT, and quantized Mistral — evaluated on 1,000 clinical queries with 0.811 cosine similarity.",
+      "Saha Mind: a Master's dissertation co-authored by Abdelfetah Safiddine using a four-agent LLM pipeline — LoRA, RAG, DistilBERT, and quantized Mistral — evaluated on 1,000 clinical queries with 0.811 cosine similarity.",
     ogImage: "/og/saha-mind.png",
     disclaimer:
       "Research prototype, not a clinical product. Saha Mind was not deployed for patient care and is not a substitute for a licensed therapist.",

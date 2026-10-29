@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "images": "python scripts/optimize-images.py",
-    "og": "python scripts/generate-og.py"
+    "og": "python scripts/generate-og.py",
+    "validate:seo": "node scripts/validate-seo.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

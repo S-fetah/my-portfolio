@@ -112,12 +112,12 @@ function Nav() {
       }`}
     >
       <nav className={styles.nav} aria-label="Primary">
-        <Link to="/" className={styles.brand} aria-label="Safiddine Abdelfetah — home">
+        <Link to="/" className={styles.brand} aria-label="Abdelfetah Safiddine — home">
           <span className={styles.brandMark} aria-hidden="true">
-            SA
+            AS
           </span>
           <span className={styles.brandText}>
-            <span className={styles.brandName}>Safiddine Abdelfetah</span>
+            <span className={styles.brandName}>Abdelfetah Safiddine</span>
             <span className={styles.brandRole}>{PROFILE.roleLine}</span>
           </span>
         </Link>

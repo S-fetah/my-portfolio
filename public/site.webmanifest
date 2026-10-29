@@ -1,11 +1,11 @@
 {
-  "name": "Safiddine Abdelfetah — Backend Lead Developer & Full-Stack Engineer",
-  "short_name": "S. Abdelfetah",
-  "description": "Portfolio and engineering case studies of Safiddine Abdelfetah, Backend Lead Developer and Full-Stack Engineer.",
+  "name": "Abdelfetah Safiddine | Backend Lead Developer & Full-Stack Engineer",
+  "short_name": "A. Safiddine",
+  "description": "Abdelfetah Safiddine is a Backend Lead Developer and Full-Stack Engineer specializing in Node.js, TypeScript, API architecture, and modern web applications.",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#f4f0e8",
-  "theme_color": "#f4f0e8",
+  "background_color": "#F7F7F4",
+  "theme_color": "#F7F7F4",
   "icons": [
     {
       "src": "/favicon.svg",

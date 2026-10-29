@@ -33,9 +33,9 @@ function Hero() {
             </p>
 
             <h1 id="hero-heading" className={styles.heading}>
-              <span>Safiddine</span>
+              <span>Abdelfetah</span>
               <span>
-                Abdelfetah<em className={styles.dot}>.</em>
+                Safiddine<em className={styles.dot}>.</em>
               </span>
             </h1>
 
@@ -110,7 +110,7 @@ function Hero() {
               <div className={styles.imageFrame}>
                 <SmartImage
                   image="profile"
-                  alt="Portrait of Safiddine Abdelfetah"
+                  alt="Portrait of Abdelfetah Safiddine, Backend Lead Developer and Full-Stack Engineer"
                   sizes="(min-width: 960px) 34vw, 88vw"
                   priority
                 />

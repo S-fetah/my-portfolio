@@ -8,12 +8,12 @@ import styles from "./NotFound.module.css";
 function NotFound() {
   const meta = useMemo(
     () => ({
-      title: "Page not found — Safiddine Abdelfetah",
+      title: "Page not found — Abdelfetah Safiddine",
       description:
         "The requested page does not exist. Explore selected work and case studies instead.",
       canonical: `${SITE_URL}/404`,
       image: `${SITE_URL}/og/home.png`,
-      imageAlt: "Safiddine Abdelfetah — portfolio",
+      imageAlt: "Abdelfetah Safiddine — portfolio",
       type: "website",
       noindex: true,
       jsonLd: {

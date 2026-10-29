@@ -18,9 +18,9 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.top}`}>
         <div className={styles.identity}>
-          <Link to="/" className={styles.brand} aria-label="Safiddine Abdelfetah — home">
+          <Link to="/" className={styles.brand} aria-label="Abdelfetah Safiddine — home">
             <span className={styles.mark} aria-hidden="true">
-              SA
+              AS
             </span>
             <span className={styles.name}>{PROFILE.name}</span>
           </Link>

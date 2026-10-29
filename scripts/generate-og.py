@@ -80,7 +80,7 @@ def label(draw, xy, text, color=COPPER):
     draw.text(xy, text, font=font(MONO_BOLD, 17), fill=color)
 
 
-def footer(draw, url="myportfolio-nu-bay.vercel.app"):
+def footer(draw, url="www.abdelfetah-safiddine.com"):
     draw.line((70, 552, 1130, 552), fill=LINE, width=1)
     draw.text((70, 574), "PORTFOLIO / CASE STUDY", font=font(MONO, 14), fill=MUTED)
     draw.text((1130, 574), url, font=font(MONO, 14), fill=MUTED, anchor="ra")
@@ -91,17 +91,17 @@ def home():
     draw.rectangle((880, 0, 1200, 630), fill=DARK)
     draw.text(
         (1040, 300),
-        "SA",
+        "AS",
         font=font(SERIF, 150),
         fill=COPPER_LIGHT,
         anchor="mm",
     )
-    label(draw, (70, 66), "BACKEND LEAD DEVELOPER · FULL-STACK ENGINEER")
-    draw.text((70, 130), "Safiddine", font=font(SERIF, 112), fill=INK)
-    draw.text((70, 236), "Abdelfetah.", font=font(SERIF, 112), fill=INK)
+    label(draw, (70, 66), "BACKEND LEAD DEVELOPER | FULL-STACK ENGINEER")
+    draw.text((70, 130), "Abdelfetah", font=font(SERIF, 112), fill=INK)
+    draw.text((70, 236), "Safiddine.", font=font(SERIF, 112), fill=INK)
     draw.line((74, 378, 800, 378), fill=COPPER, width=3)
     body = (
-        "Production backends, integrations and full-stack products — "
+        "Production backends, multi-provider API integrations, and full-stack products — "
         "plus applied LLM research."
     )
     face = font(SANS, 27)
@@ -146,7 +146,7 @@ def apple_icon():
     draw.rectangle((6, 6, size - 7, size - 7), outline=COPPER, width=2)
     draw.text(
         (size / 2, size / 2 + 2),
-        "SA",
+        "AS",
         font=font(SERIF, 72),
         fill=COPPER_LIGHT,
         anchor="mm",
