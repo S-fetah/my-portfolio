@@ -2,41 +2,158 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/portfolio.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#f4f0e8" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>Safiddine Abdelfetah — Backend Lead Developer &amp; Full-Stack Engineer</title>
     <meta
       name="description"
-      content="Safiddine Abdelfetah (Fettah Safi) — Backend Lead Developer in Médéa, Algeria. Leads the production backend of a multi-vertical travel commerce platform (Node.js, Express.js, PostgreSQL, Prisma, Redis). Full-stack products with React, Next.js, and React Native, plus applied LLM research: agents and fine-tuning for his Master's dissertation."
+      content="Safiddine Abdelfetah is a Backend Lead Developer and Full-Stack Engineer in Médéa, Algeria. He builds production backends, multi-provider integrations, and full-stack products — with applied LLM research from his Master's dissertation."
     />
-    <meta name="theme-color" content="#0f1419" />
+    <meta name="author" content="Safiddine Abdelfetah" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://myportfolio-nu-bay.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Safiddine Abdelfetah" />
     <meta
       property="og:title"
-      content="Safiddine Abdelfetah — Backend Lead Developer"
+      content="Safiddine Abdelfetah — Backend Lead Developer &amp; Full-Stack Engineer"
     />
     <meta
       property="og:description"
-      content="Backend Lead Developer: production travel-commerce backend (Node.js, Express.js, PostgreSQL, Prisma, Redis), full-stack products (React, Next.js, React Native), and applied LLM research from a Master's dissertation on LLM agents."
+      content="Production backends, multi-provider integrations, and full-stack products — with applied LLM research from a Master's dissertation."
     />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="https://myportfolio-nu-bay.vercel.app/" />
+    <meta property="og:image" content="https://myportfolio-nu-bay.vercel.app/og/home.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Safiddine Abdelfetah — Backend Lead Developer and Full-Stack Engineer"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@abdelfetah78" />
     <meta
       name="twitter:title"
-      content="Safiddine Abdelfetah — Backend Lead Developer"
+      content="Safiddine Abdelfetah — Backend Lead Developer &amp; Full-Stack Engineer"
     />
     <meta
       name="twitter:description"
-      content="Production backend engineering, full-stack products, and applied LLM research."
+      content="Production backends, multi-provider integrations, and full-stack products — with applied LLM research from a Master's dissertation."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="twitter:image" content="https://myportfolio-nu-bay.vercel.app/og/home.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Safiddine Abdelfetah — Backend Lead Developer and Full-Stack Engineer"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/fonts/manrope-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <title>Safiddine Abdelfetah — Backend Lead Developer & Full-Stack Engineer</title>
+    <link
+      rel="preload"
+      href="/fonts/newsreader-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <script>
+      /* Apply the stored/system theme before first paint to avoid a flash. */
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) {
+            meta.setAttribute(
+              "content",
+              theme === "dark" ? "#0f0e0b" : "#f4f0e8"
+            );
+          }
+        } catch (error) {
+          /* localStorage can be unavailable in private or restricted contexts. */
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json" id="page-schema">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://myportfolio-nu-bay.vercel.app/#person",
+            "name": "Safiddine Abdelfetah",
+            "jobTitle": "Backend Lead Developer · Full-Stack Engineer",
+            "url": "https://myportfolio-nu-bay.vercel.app/",
+            "email": "mailto:fettahsafi.6@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Médéa",
+              "addressCountry": "DZ"
+            },
+            "knowsLanguage": ["Arabic", "French", "English"],
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Fennec Booking"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Yahia Farès University of Médéa"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/abdelfetah-safiddine-46582b263/",
+              "https://github.com/S-fetah",
+              "https://x.com/abdelfetah78"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://myportfolio-nu-bay.vercel.app/#website",
+            "url": "https://myportfolio-nu-bay.vercel.app/",
+            "name": "Safiddine Abdelfetah — Portfolio",
+            "description": "Safiddine Abdelfetah is a Backend Lead Developer and Full-Stack Engineer in Médéa, Algeria. He builds production backends, multi-provider integrations, and full-stack products — with applied LLM research from his Master's dissertation.",
+            "author": {
+              "@id": "https://myportfolio-nu-bay.vercel.app/#person"
+            },
+            "inLanguage": "en"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <noscript>
+        <div style="max-width: 70ch; margin: 4rem auto; padding: 0 1.5rem; font-family: system-ui, sans-serif; color: #191713;">
+          <p style="font-family: monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #9a3f1b;">Safiddine Abdelfetah — Backend Lead Developer · Full-Stack Engineer</p>
+          <h1 style="font-family: Georgia, serif; font-weight: 400;">Production backends, integrations, and full-stack products.</h1>
+          <p>This portfolio needs JavaScript to display the interactive case studies. You can reach me directly at <a href="mailto:fettahsafi.6@gmail.com">fettahsafi.6@gmail.com</a>, or read the case studies with JavaScript enabled.</p>
+          <p>Based in Médéa, Algeria. Open to backend and full-stack roles.</p>
+        </div>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

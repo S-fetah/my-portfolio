@@ -1,42 +1,59 @@
-import styles from "./skillsStyles.module.css";
-import { LANGUAGES, SKILL_GROUPS } from "../../data/content";
+import { ArrowUpRight } from "lucide-react";
+import Link from "../../router/Link";
+import { SKILL_GROUPS } from "../../data/content";
 import Reveal from "../common/Reveal";
+import SectionHeader from "../common/SectionHeader";
+import styles from "./Skills.module.css";
 
 function Skills() {
   return (
     <section id="skills" className="section" aria-labelledby="skills-heading">
       <div className="sectionInner">
-        <Reveal>
-          <p className="sectionKicker">Skills</p>
-          <h2 id="skills-heading" className="sectionTitle">
-            Grouped by where they ship
-          </h2>
-          <p className="sectionLead">
-            The working stack behind the experience above — frontend to
-            infrastructure to the integrations that tie it together.
-          </p>
-        </Reveal>
-        <div className={styles.grid}>
+        <SectionHeader
+          index="03"
+          kicker="Capabilities"
+          id="skills-heading"
+          title={
+            <>
+              A stack grouped by where it{" "}
+              <em className="displayItalic">actually shipped.</em>
+            </>
+          }
+          lead="No proficiency bars and no chip wall — just the tools behind the work above, grouped by the problem they solve."
+        />
+
+        <div className={styles.matrix}>
           {SKILL_GROUPS.map((group, index) => (
-            <Reveal key={group.title} delay={Math.min(index, 3) * 80}>
+            <Reveal key={group.id} delay={Math.min(index, 3) * 0.04}>
               <article className={styles.group}>
-                <h3 className={styles.groupTitle}>{group.title}</h3>
-                {group.note && <p className={styles.groupNote}>{group.note}</p>}
-                <ul className={styles.tags}>
-                  {group.skills.map((skill) => (
-                    <li key={skill} className={styles.tag}>
-                      {skill}
-                    </li>
+                <div className={styles.heading}>
+                  <span className={styles.index} aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3>{group.title}</h3>
+                </div>
+                <ul className={styles.items}>
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
                   ))}
                 </ul>
+                <p className={styles.evidence}>
+                  <span aria-hidden="true">↳</span>
+                  {group.evidence}
+                </p>
               </article>
             </Reveal>
           ))}
         </div>
+
         <Reveal>
-          <p className={styles.languages}>
-            <span className={styles.languagesLabel}>Languages</span>
-            {LANGUAGES.join(" · ")} — professional proficiency or above.
+          <p className={styles.footnote}>
+            Looking for proof rather than a list?{" "}
+            <Link to="/work/fennec-booking" className={styles.link}>
+              The Fennec case study
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </Link>{" "}
+            shows how the backend stack fits together in production.
           </p>
         </Reveal>
       </div>

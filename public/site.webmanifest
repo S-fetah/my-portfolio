@@ -1,0 +1,21 @@
+{
+  "name": "Safiddine Abdelfetah — Backend Lead Developer & Full-Stack Engineer",
+  "short_name": "S. Abdelfetah",
+  "description": "Portfolio and engineering case studies of Safiddine Abdelfetah, Backend Lead Developer and Full-Stack Engineer.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f4f0e8",
+  "theme_color": "#f4f0e8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}

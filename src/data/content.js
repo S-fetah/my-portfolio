@@ -1,25 +1,50 @@
-/* Central content source — update copy/data here instead of hunting through JSX.
+/* Central content source.
+   Every claim below is grounded in the CV, the production systems described,
+   public repositories, or the dissertation. Project maturity is labelled
+   honestly; confidential employer details are intentionally omitted. */
 
-   Content policy: every claim below is backed by a verifiable artifact —
-   the CV (src/assets/Safiddine-Abdelfetah.pdf), local project source code,
-   public GitHub repos, or the live production systems themselves.
-   Anything not verifiable is either omitted or explicitly labelled
-   (e.g. "concept", "in development", "not published here"). */
+export const SITE = {
+  url: "https://myportfolio-nu-bay.vercel.app",
+  name: "Safiddine Abdelfetah",
+  title: "Backend Lead Developer & Full-Stack Engineer",
+  description:
+    "Safiddine Abdelfetah is a Backend Lead Developer and Full-Stack Engineer in Médéa, Algeria. He builds production backends, multi-provider integrations, and full-stack products — with applied LLM research from his Master's dissertation.",
+  ogImage: "/og/home.png",
+};
 
 export const PROFILE = {
   name: "Safiddine Abdelfetah",
   firstName: "Safiddine",
   lastName: "Abdelfetah",
-  aka: "Fettah Safi",
   title: "Backend Lead Developer",
+  secondaryTitle: "Full-Stack Engineer",
+  roleLine: "Backend Lead Developer · Full-Stack Engineer",
   location: "Médéa, Algeria",
+  timezone: "UTC+1",
   phone: "+213 659 235 442",
   email: "fettahsafi.6@gmail.com",
+  availability: "Open to backend & full-stack roles",
   valueProp:
-    "I build backend systems and full-stack products that turn complex workflows into reliable software — currently leading the backend of a multi-vertical travel commerce platform, backed by applied LLM & multi-agent systems research from my Master's thesis.",
+    "I build the systems behind real products: production backends, multi-provider integrations, and full-stack applications that hold up under load, failure, and change.",
+  shortBio:
+    "Backend Lead Developer at Fennec Booking, where I run the production backend of a multi-vertical travel commerce platform. Master's research in applied LLM systems.",
   about: [
-    "I'm a Backend Lead Developer at Fennec Booking, where I design, build, and operate the production backend of an Algerian travel commerce platform. One API serves eight business verticals — flights, hotels, transfers, vacation packages, e-visas, eSIMs, travel insurance, and ferries — normalizing multiple external providers behind unified booking, pricing, and payment workflows for web and mobile clients.",
-    "Alongside production backend engineering, I completed my Master's research (2024–2025) in Computer Science at Yahia Farès University on applied AI: designing and developing a psychological assessment system powered by a 4-agent LLM pipeline (LoRA-fine-tuned LLaMA 3.2, LangChain & FAISS RAG, DistilBERT sentiment profiling, and quantized Mistral 7B clinical report generation). I'm comfortable across the entire lifecycle — from data modeling and model fine-tuning to production APIs, mobile apps, and cloud deployment.",
+    "I care about the part of software that has to keep working: the data model, the integration boundary, the retry path, the payment that must reconcile. At Fennec Booking I lead the backend behind a travel platform that sells across eight verticals through one API, connecting external suppliers to unified booking, pricing, payment, and support workflows.",
+    "My background spans the full stack — React and React Native clients, Node.js and FastAPI services, PostgreSQL, Redis, and Docker — alongside applied AI research. My Master's dissertation designed a four-agent LLM pipeline for psychological assessment, evaluated on 1,000 clinical queries. I am most useful where the model, the API, and the interface have to agree.",
+  ],
+  principles: [
+    {
+      title: "Unify the contract",
+      body: "Provider APIs are messy by nature. The job is to give the rest of the product one dependable interface.",
+    },
+    {
+      title: "Assume failure",
+      body: "Retries, reconciliation, and recovery belong in the design — not in the incident review.",
+    },
+    {
+      title: "Own the lifecycle",
+      body: "From schema and endpoint to deployment, monitoring, and the client that consumes it.",
+    },
   ],
 };
 
@@ -29,93 +54,123 @@ export const SOCIALS = {
   twitter: "https://x.com/abdelfetah78",
 };
 
-/* Each group names where the skills actually ship — no logo wall. */
+export const METRICS = [
+  { value: "8", label: "travel verticals", note: "behind one platform API" },
+  { value: "10k+", label: "registered users", note: "on the production platform" },
+  { value: "4", label: "LLM agents", note: "in the dissertation system" },
+  { value: "0.811", label: "cosine similarity", note: "evaluated on 1,000 queries" },
+];
+
+export const NAV_LINKS = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+  { href: "#work", label: "Work" },
+  { href: "#contact", label: "Contact" },
+];
+
+/* Skill groups are nouns, not sentence-length chips. The evidence line names
+   where the work actually shipped. */
 export const SKILL_GROUPS = [
   {
-    title: "Backend Engineering",
-    note: "Ships in: Fennec backend (production) · Makseb SaaS (in development)",
-    skills: [
+    id: "backend",
+    title: "Backend Development",
+    items: [
       "Node.js",
       "Express.js",
-      "REST API design",
-      "Authentication & authorization (JWT, OAuth 2.0)",
-      "Socket.IO (real-time)",
-      "Bull + Redis (background jobs)",
       "NestJS",
-      "Golang",
+      "FastAPI",
+      "Go",
+      "REST API design",
+      "JWT & OAuth 2.0",
+      "Socket.IO",
+      "Bull + Redis",
     ],
+    evidence: "Production at Fennec Booking · Makseb · Medi-Care",
   },
   {
-    title: "Databases & Data Modeling",
-    note: "Relational modeling in production · Supabase & Firestore across projects",
-    skills: [
+    id: "frontend",
+    title: "Frontend Development",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Responsive UI"],
+    evidence: "Fennec web · Saha Mind dashboard · client sites",
+  },
+  {
+    id: "databases",
+    title: "Databases",
+    items: [
       "PostgreSQL",
-      "Prisma ORM",
-      "Relational modeling & migrations",
-      "SQL",
+      "Prisma",
       "Redis",
       "MongoDB",
       "Supabase",
       "Firestore",
+      "SQL & migrations",
     ],
+    evidence: "Relational modeling in production · managed data across projects",
   },
   {
-    title: "Frontend & Mobile",
-    note: "Ships in: Fennec web + mobile, Saha Mind, FMD Store, client sites",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Responsive interfaces",
-      "React Native",
-      "Expo",
-      "WebView integration & deep linking",
-    ],
-  },
-  {
-    title: "AI & LLM Engineering",
-    note: "Saha Mind multi-agent system (Master's thesis) · passport OCR in production",
-    skills: [
-      "Multi-agent LLM systems (4-agent orchestration)",
-      "Parameter-efficient fine-tuning (LoRA on LLaMA 3.2)",
-      "Retrieval-Augmented Generation (RAG via LangChain & FAISS)",
-      "Dense sentence embeddings (SentenceTransformers MiniLM)",
-      "Sentiment classification (fine-tuned DistilBERT)",
-      "Model quantization & local inference (quantized Mistral 7B)",
-      "Empirical evaluation (Cosine similarity, LLM-as-a-judge, WordNet)",
-      "AI vision APIs for structured data extraction",
-      "Python, FastAPI, PyTorch, Hugging Face Transformers",
-    ],
-  },
-  {
-    title: "Deployment & Operations",
-    note: "Production deployment & system operations",
-    skills: [
-      "Linux / Ubuntu VPS",
-      "Docker & Docker Compose",
-      "Nginx",
-      "PM2",
-      "Git & GitHub",
-      "GitHub Actions CI/CD",
-      "Vercel",
-      "Sentry monitoring",
-    ],
-  },
-  {
-    title: "Security & Integrations",
-    note: "Production-hardened patterns from real integrations",
-    skills: [
-      "HMAC request signing",
-      "AES-256-GCM encryption",
-      "Helmet · CORS · rate limiting",
-      "bcrypt",
-      "SATIM payments (CIB / Edahabia)",
-      "SendGrid email",
+    id: "integrations",
+    title: "APIs & Integrations",
+    items: [
+      "SATIM (CIB / Edahabia)",
+      "SendGrid",
       "Firebase",
       "Cloudinary",
+      "Google Maps",
       "Swagger / OpenAPI",
+      "HMAC request signing",
+      "AES-256-GCM",
     ],
+    evidence: "Travel suppliers · payments · notifications · document uploads",
+  },
+  {
+    id: "mobile",
+    title: "Mobile Development",
+    items: [
+      "React Native",
+      "Expo",
+      "Deep linking",
+      "WebView sessions",
+      "FCM push",
+      "Offline states",
+    ],
+    evidence: "Fennec mobile client · Saha Mind patient app",
+  },
+  {
+    id: "ai",
+    title: "AI & Machine Learning",
+    items: [
+      "Python",
+      "PyTorch",
+      "Hugging Face",
+      "LoRA fine-tuning",
+      "RAG · LangChain · FAISS",
+      "DistilBERT",
+      "Mistral 7B",
+      "Vision OCR",
+    ],
+    evidence: "Saha Mind dissertation · passport extraction in production",
+  },
+  {
+    id: "devops",
+    title: "DevOps & Deployment",
+    items: [
+      "Linux / Ubuntu VPS",
+      "Docker & Compose",
+      "Nginx",
+      "PM2",
+      "GitHub Actions",
+      "Vercel",
+      "Sentry",
+    ],
+    evidence: "Production deployment · CI/CD · monitoring",
+  },
+  {
+    id: "workflow",
+    title: "Tools & Workflow",
+    items: ["Git & GitHub", "Postman", "OpenAPI docs", "CI/CD", "Sentry"],
+    evidence: "Day-to-day delivery and production operations",
   },
 ];
 
@@ -123,140 +178,232 @@ export const LANGUAGES = ["Arabic", "French", "English"];
 
 export const EXPERIENCE = [
   {
+    id: "fennec",
     role: "Backend Lead Developer",
     company: "Fennec Booking",
-    period: "Oct 2025 – Present",
-    bullets: [
-      "Lead the design, build, and operation of the production backend for a multi-vertical travel platform — flights, hotels, transfers, packages, e-visas, eSIMs, insurance, and ferries — serving +10k registered users across web and mobile clients.",
-      "Architected unified booking, pricing, and payment workflows normalizing multiple third-party travel suppliers and inventory feeds behind one cohesive API.",
-      "Integrated secure payment gateways (CIB / Edahabia) and engineered pricing, commission, reconciliation, and automated wallet workflows.",
-      "Built real-time customer support with presence tracking, live messaging, and instant status updates.",
-      "Implemented fault-tolerant background processing with automated retries and recovery for asynchronous booking fulfillment.",
-      "Integrated an AI-powered vision pipeline for structured passport data extraction to streamline e-visa applications.",
-      "Engineered production security: token-based authentication, request signing, encrypted handoffs, rate limiting, and automated CI/CD deployment pipelines.",
+    period: "Oct 2025 — Present",
+    summary:
+      "Leading the production backend of a multi-vertical travel commerce platform used by web and mobile clients.",
+    achievements: [
+      { value: "8", label: "verticals" },
+      { value: "10k+", label: "registered users" },
+      { value: "1", label: "unified API" },
     ],
+    groups: [
+      {
+        title: "Platform & integrations",
+        bullets: [
+          "Lead the design, build, and operation of the production backend across flights, hotels, transfers, packages, e-visas, eSIMs, insurance, and ferries.",
+          "Architected unified booking, pricing, and payment workflows that normalize multiple third-party travel suppliers behind one cohesive API.",
+        ],
+      },
+      {
+        title: "Payments & operations",
+        bullets: [
+          "Integrated SATIM card payments (CIB / Edahabia) and engineered pricing, commission, reconciliation, and automated wallet workflows.",
+          "Implemented fault-tolerant background processing with automated retries and recovery for asynchronous booking fulfillment.",
+        ],
+      },
+      {
+        title: "Real-time & reliability",
+        bullets: [
+          "Built real-time customer support with presence tracking, live messaging, and instant status updates over Socket.IO and Redis.",
+          "Integrated an AI-powered vision pipeline for structured passport extraction in e-visa applications.",
+        ],
+      },
+      {
+        title: "Security & delivery",
+        bullets: [
+          "Engineered token-based authentication, request signing, encrypted handoffs, rate limiting, and automated CI/CD deployment pipelines.",
+        ],
+      },
+    ],
+    stack: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "Docker",
+      "CI/CD",
+    ],
+    caseStudy: "/work/fennec-booking",
   },
   {
+    id: "freelance",
     role: "Freelance Full-Stack Developer",
-    company: "Self-Employed",
-    period: "2022 – 2023",
+    company: "Self-employed",
+    period: "2022 — 2023",
+    summary:
+      "End-to-end client delivery with the MERN stack — interface, APIs, and database design.",
     bullets: [
-      "Built fast, dynamic websites for independent clients using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
-      "Delivered end-to-end projects including a book printing shop website, a library management website, and a clothing e-commerce site — covering UI, backend APIs, and database design.",
+      "Built fast, dynamic websites for independent clients with MongoDB, Express.js, React, and Node.js.",
+      "Delivered a book printing shop site, a library management site, and a clothing e-commerce site.",
     ],
+    stack: ["MongoDB", "Express.js", "React", "Node.js"],
   },
   {
+    id: "driver",
     role: "Backend Developer — Driver Mobile App",
-    company: "Academic Project",
-    period: "2021 – 2022",
+    company: "Academic project",
+    period: "2021 — 2022",
+    summary:
+      "Backend and server/client logic for a location-focused mobile application.",
     bullets: [
-      "Built the backend and server/client logic (CRUD processes) for a mobile app helping drivers locate exact places, plus supporting front-end pages.",
-      "Used Node.js/Express for the server, MongoDB for data, and React Native for the mobile front-end, integrating Google Maps and other APIs for location accuracy.",
+      "Built the CRUD backend for a mobile app helping drivers locate hotels, mechanics, spare parts, parking, and towing.",
+      "Used Node.js/Express, MongoDB, React Native, and Google Maps APIs for location accuracy.",
     ],
+    stack: ["Node.js", "Express.js", "MongoDB", "React Native", "Google Maps"],
   },
 ];
 
 export const EDUCATION = [
   {
+    id: "master",
     school: "Yahia Farès University of Médéa",
     degree: "Master's in Computer Science — System Engineering & Web Technologies",
-    period: "2023 – 2025",
+    period: "2023 — 2025",
     detail:
-      "Master's Dissertation: “Design And Development Of A Psychological Assessment Tool Based On LLM Agents” — co-authored with Said Seghir Akram, supervised by Dr. Rahim Messaoud. Architected a 4-agent collaborative LLM pipeline (T5 grammar normalization, fine-tuned LLaMA 3.2 Instruct + LoRA with LangChain/FAISS RAG, DistilBERT sentiment profiling, and quantized Mistral 7B clinical report generation). Evaluated on 1,000 clinical test queries achieving 0.811 cosine similarity and 0.835 LLM semantic similarity, with cross-platform clients in bare React Native and Next.js.",
+      "Dissertation: a psychological assessment tool built on a four-agent LLM pipeline, co-authored with Said Seghir Akram and supervised by Dr. Rahim Messaoud.",
+    link: "/work/saha-mind",
   },
   {
+    id: "licence",
     school: "Yahia Farès University of Médéa",
     degree: "Bachelor's Degree (Licence), Computer Systems",
     period: "2023",
-    detail: "Core foundation in algorithms, data structures, relational databases, operating systems, and computer systems architecture.",
+    detail:
+      "Foundations in algorithms, data structures, relational databases, operating systems, and computer architecture.",
   },
 ];
 
 /* ------------------------------------------------------------------ */
-/* Projects — three tiers: featured case studies, more projects,      */
-/* earlier client/academic work. Featured cards open a full case      */
-/* study; every claim below maps to code, docs, or a live system.     */
+/* Projects — two case studies, selected work, and a compact archive. */
 /* ------------------------------------------------------------------ */
 
 export const FEATURED_PROJECTS = [
   {
     id: "fennec-platform",
-    title: "Fennec Booking — Travel Commerce Platform",
+    slug: "fennec-booking",
+    route: "/work/fennec-booking",
+    title: "Fennec Booking",
+    subtitle: "Travel commerce platform",
     category: "Production backend · Professional work",
     status: "In production",
     statusKind: "production",
-    role: "Backend Lead Developer (Oct 2025 – present)",
+    period: "2025 — Present",
+    role: "Backend Lead Developer",
     description:
       "The production backend behind an Algerian travel commerce platform: one API unifying eight verticals and multiple external providers behind reliable booking, pricing, and payment workflows.",
+    lede:
+      "Eight travel verticals. Multiple suppliers. One booking lifecycle — designed, built, and operated in production.",
+    metrics: [
+      { value: "8", label: "travel verticals" },
+      { value: "10k+", label: "registered users" },
+      { value: "1", label: "unified API" },
+    ],
     stack: [
       "Node.js",
       "Express.js",
-      "REST APIs",
-      "Multi-Provider Aggregation",
-      "Payment Gateways",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "SATIM",
       "Docker",
       "CI/CD",
     ],
     links: [],
     diagram: "fennec",
+    coverType: "fennec",
+    metaTitle: "Fennec Booking — Travel Commerce Backend Case Study",
+    metaDescription:
+      "How Safiddine Abdelfetah leads the production backend of Fennec Booking: eight travel verticals, multi-provider integration, SATIM payments, real-time support, and resilient booking fulfilment.",
+    ogImage: "/og/fennec-booking.png",
+    outcomes: [
+      "Eight travel verticals served through one backend API.",
+      "Live in production since 2025, serving 10,000+ registered users.",
+      "SATIM card payments, pricing, commission, reconciliation, and wallet workflows in production.",
+      "Fault-tolerant background processing protects asynchronous booking fulfilment.",
+    ],
+    confidentiality:
+      "All proprietary schemas, internal endpoints, infrastructure credentials, and commercial partner contracts are omitted in line with non-disclosure agreements.",
     caseStudy: [
       {
+        id: "platform",
         heading: "The platform",
         paragraphs: [
           "Fennec Booking sells travel through one product: flights, hotels, transfers, vacation packages, e-visas, eSIMs, travel insurance, and ferry tickets — with a Next.js web app and an Expo/React Native mobile app as clients. I lead the backend that all of it runs on, from data model to deployment.",
         ],
       },
       {
+        id: "problem",
         heading: "The engineering problem",
         paragraphs: [
           "Every vertical talks to external providers with their own APIs, quoting styles, currencies, and failure modes. On top of that sit business rules the providers know nothing about: agency pricing and commissions, SATIM card payments as used in Algeria, long-lived booking state that must survive retries and deployments, and customers who expect real-time support while a booking is in flight.",
         ],
       },
       {
+        id: "architecture",
         heading: "Platform & integration architecture",
         paragraphs: [
-          "A service-oriented integration architecture engineered to seamlessly aggregate multiple external travel suppliers and deliver real-time booking capabilities:",
+          "A service-oriented integration architecture designed to aggregate multiple external travel suppliers and deliver real-time booking capabilities:",
         ],
         bullets: [
-          "Provider Integration Layer: Normalizes disparate third-party travel APIs into standardized contracts for flights, hotels, transfers, eSIMs, e-visas, and ferries.",
-          "Unified Transaction Lifecycle: Coordinates multi-step booking, server-side price validation, and automated ticket/voucher fulfillment.",
-          "Payment Processing: Integrates local card payment gateways with automated reconciliation and wallet management.",
-          "Fault-Tolerant Operations: Implements background processing, automatic retries, and failure recovery for reliable booking completion.",
+          "Provider integration layer: normalizes disparate third-party travel APIs into standardized contracts for flights, hotels, transfers, eSIMs, e-visas, and ferries.",
+          "Unified transaction lifecycle: coordinates multi-step booking, server-side price validation, and automated ticket or voucher fulfilment.",
+          "Payment processing: integrates local card payment gateways with automated reconciliation and wallet management.",
+          "Fault-tolerant operations: background processing, automatic retries, and failure recovery for reliable booking completion.",
         ],
       },
       {
+        id: "workflows",
         heading: "Key workflows I built",
         bullets: [
           "Unified booking and payment flows across providers, with server-side price validation end to end.",
           "SATIM (CIB / Edahabia) payment integration with pricing, commission, reconciliation, and wallet logic.",
-          "E-visa pipeline including AI-powered passport data extraction (vision OCR) for structured applicant data.",
-          "PDF voucher generation and transactional email (SendGrid) for booking confirmations.",
+          "E-visa pipeline including AI-powered passport data extraction for structured applicant data.",
+          "PDF voucher generation and transactional email through SendGrid for booking confirmations.",
           "Real-time customer support with presence tracking over Socket.IO and Redis Pub/Sub.",
         ],
       },
       {
-        heading: "Clients and tooling",
+        id: "clients",
+        heading: "Clients & tooling",
         paragraphs: [
           "On the client side I also work on the Expo/React Native app — Google OAuth through deep links, WebView session handling, and FCM push notifications — and on internal tooling such as a Python financial reporting job that produces Excel and PDF statements for the team.",
         ],
       },
       {
+        id: "confidentiality",
         heading: "Confidentiality & NDA boundaries",
         paragraphs: [
-          "Live in production since 2025, serving +10k registered users. In strict compliance with non-disclosure agreements (NDA), all proprietary database schemas, internal endpoint specifications, infrastructure credentials, and commercial partner contracts are confidential and omitted from this public portfolio.",
+          "Live in production since 2025, serving 10,000+ registered users. In strict compliance with non-disclosure agreements, all proprietary database schemas, internal endpoint specifications, infrastructure credentials, and commercial partner contracts are confidential and omitted from this public portfolio.",
         ],
+        callout:
+          "The architecture diagram is intentionally sanitized. It shows the shape of the integration model, not proprietary implementation detail.",
       },
     ],
   },
   {
     id: "saha-mind",
-    title: "Saha Mind — Psychological Assessment with LLM Agents",
+    slug: "saha-mind",
+    route: "/work/saha-mind",
+    title: "Saha Mind",
+    subtitle: "Psychological assessment with LLM agents",
     category: "Applied AI · Master's dissertation",
     status: "Research · 2024–2025",
     statusKind: "research",
-    role: "Co-author with Said Seghir Akram · Supervised by Dr. Rahim Messaoud · Built mobile client, backend pipeline & fine-tuning workflows",
+    period: "2024 — 2025",
+    role: "Co-author with Said Seghir Akram · Supervised by Dr. Rahim Messaoud",
     description:
-      "My Master's dissertation: an AI-driven psychological assessment and therapeutic support platform coordinating four specialized LLM agents across a React Native mobile app and Next.js clinical dashboard.",
+      "My Master's dissertation: an AI-driven psychological assessment and therapeutic support platform coordinating four specialized LLM agents across a React Native mobile app and a Next.js clinical dashboard.",
+    lede:
+      "Four specialized models, one clinical workflow, and an evaluation designed to test whether the system was actually helpful.",
+    metrics: [
+      { value: "4", label: "specialized agents" },
+      { value: "1,000", label: "evaluation queries" },
+      { value: "0.811", label: "cosine similarity" },
+    ],
     stack: [
       "LLaMA 3.2 (LoRA)",
       "LangChain / RAG",
@@ -265,74 +412,121 @@ export const FEATURED_PROJECTS = [
       "Quantized Mistral 7B",
       "React Native",
       "Next.js",
-      "TypeScript",
       "FastAPI",
       "Supabase",
     ],
     links: [
       {
-        label: "Mobile client (GitHub)",
+        label: "Mobile client on GitHub",
         url: "https://github.com/S-fetah/Saha_Mind_Mobile",
       },
       {
-        label: "Clinician dashboard (GitHub)",
+        label: "Clinician dashboard on GitHub",
         url: "https://github.com/S-fetah/pfe-dashboard",
       },
     ],
     diagram: "saha",
+    coverType: "saha",
+    metaTitle: "Saha Mind — LLM Agent Research Case Study",
+    metaDescription:
+      "Saha Mind: a Master's dissertation using a four-agent LLM pipeline — LoRA, RAG, DistilBERT, and quantized Mistral — evaluated on 1,000 clinical queries with 0.811 cosine similarity.",
+    ogImage: "/og/saha-mind.png",
+    disclaimer:
+      "Research prototype, not a clinical product. Saha Mind was not deployed for patient care and is not a substitute for a licensed therapist.",
+    outcomes: [
+      "Four specialized agents coordinated across a React Native client and a Next.js dashboard.",
+      "Evaluated on 1,000 real-world sample test pairs using three semantic similarity measures.",
+      "Jarvis + RAG scored 0.811 cosine similarity and 0.835 on an LLM-as-a-judge semantic score.",
+      "The work was documented as assistive clinical tooling, not autonomous diagnosis.",
+    ],
+    evaluation: {
+      caption:
+        "Evaluation on 1,000 real-world sample test pairs. Higher is better; the proposed system is highlighted.",
+      columns: [
+        "Metric",
+        "LLaMA 3.2",
+        "phi-2 + RAG",
+        "GPT-2 Large",
+        "Jarvis + RAG",
+      ],
+      rows: [
+        {
+          label: "Cosine similarity",
+          values: ["0.636", "0.700", "0.486", "0.811"],
+        },
+        {
+          label: "LLM-as-a-judge",
+          values: ["0.660", "0.721", "0.523", "0.835"],
+        },
+        {
+          label: "WordNet similarity",
+          values: ["0.588", "0.699", "0.517", "0.784"],
+        },
+      ],
+    },
     caseStudy: [
       {
+        id: "research",
         heading: "Research context & clinical challenge",
         paragraphs: [
-          "Master's Degree in Computer Science (System Engineering & Web Technologies, Yahia Farès University of Médéa, Promotion 2024–2025), co-authored with Said Seghir Akram and supervised by Dr. Rahim Messaoud. Mental health systems globally struggle with accessibility, specialist shortages, and limited continuity between episodic consultations. Our thesis investigated how a modular, multi-agent LLM framework can provide continuous emotional support for patients and automated diagnostic documentation for clinicians — without replacing the human therapist.",
+          "Master's Degree in Computer Science (System Engineering & Web Technologies, Yahia Farès University of Médéa, 2024–2025), co-authored with Said Seghir Akram and supervised by Dr. Rahim Messaoud. Mental health systems globally struggle with accessibility, specialist shortages, and limited continuity between consultations. Our thesis investigated how a modular, multi-agent LLM framework can provide continuous emotional support and automated documentation for clinicians — without replacing the human therapist.",
         ],
       },
       {
-        heading: "4-Agent collaborative architecture",
+        id: "architecture",
+        heading: "4-agent collaborative architecture",
         paragraphs: [
-          "Instead of relying on a monolithic model, the system divides psychological workflow across four specialized language models orchestrated via FastAPI and LangChain:",
+          "Instead of relying on a monolithic model, the system divides the psychological workflow across four specialized language models orchestrated through FastAPI and LangChain:",
         ],
         bullets: [
-          "Prompt Formatting Agent (vennify/t5-base-grammar-correction, <0.2s): Normalizes grammatical noise, cleans raw user queries, and structures inputs into role-defining, domain-specific instruction prompts with safety constraints.",
-          "Therapeutic Conversational Agent 'Jarvis' (Fine-tuned LLaMA 3.2 Instruct + LoRA, <2s): Trained on psycho-counseling datasets and augmented via LangChain RAG. Uses 384-dimensional dense sentence embeddings (SentenceTransformers paraphrase-MiniLM-L6-v2) and FAISS vector similarity search against PsychoCounseling.npy to deliver contextually grounded, empathetic dialogue.",
-          "Sentiment Analysis Agent (Fine-tuned DistilBERT, <3s): Processes multi-turn conversation history to extract emotional valence and mental health distress markers (anxiety, depression, irritability) across sessions.",
-          "Medical Report Generation Agent (Quantized Mistral 7B, <12s): Synthesizes patient transcripts, sentiment trajectories, and clinician notes into structured diagnostic reports and DSM-aligned clinical summaries.",
+          "Prompt Formatting Agent (vennify/t5-base-grammar-correction, <0.2s): normalizes grammatical noise, cleans raw queries, and structures inputs with safety constraints.",
+          "Therapeutic Conversational Agent 'Jarvis' (fine-tuned LLaMA 3.2 Instruct + LoRA, <2s): trained on psycho-counseling datasets and augmented with RAG using 384-dimensional MiniLM embeddings and FAISS.",
+          "Sentiment Analysis Agent (fine-tuned DistilBERT, <3s): processes multi-turn conversation history to extract emotional valence and distress markers.",
+          "Medical Report Generation Agent (quantized Mistral 7B, <12s): synthesizes transcripts, sentiment trajectories, and clinician notes into structured, DSM-aligned clinical summaries.",
         ],
       },
       {
+        id: "clients",
         heading: "Full-stack client & cloud ecosystem",
         paragraphs: [
           "The architecture was implemented and tested end-to-end across two complementary client applications backed by cloud infrastructure:",
         ],
         bullets: [
-          "Patient Mobile App (React Native, TypeScript — open source on GitHub): Daily mood tracker with timeline emojis, streak tracking, wellness tips, up to 5 daily self-assessment quizzes, and real-time chat with Jarvis and assigned clinicians.",
-          "Practitioner Web Dashboard (Next.js, TypeScript, ShadCN UI — open source on GitHub): Centralized patient registry, 7-day emotional trend analysis, interactive regional distribution map of Algeria (Médéa, Béjaïa, Adrar), appointment calendar, and automated clinical report review.",
-          "Backend & Orchestration: Python FastAPI backend running ASGI/Uvicorn with Pyngrok tunnels to Google Colab GPU runtimes for model inference, paired with Supabase (managed PostgreSQL, real-time sync, Auth, and role-based access control).",
+          "Patient mobile app (React Native, TypeScript): mood tracking, streaks, self-assessment quizzes, and real-time chat with Jarvis and assigned clinicians.",
+          "Practitioner dashboard (Next.js, TypeScript, shadcn/ui): patient registry, seven-day emotional trend analysis, regional distribution map, appointment calendar, and report review.",
+          "Backend and orchestration: Python FastAPI on ASGI/Uvicorn, Pyngrok tunnels to Google Colab GPU runtimes, and Supabase for PostgreSQL, real-time sync, auth, and role-based access.",
         ],
       },
       {
-        heading: "Quantitative benchmarks & evaluation results",
+        id: "evaluation",
+        heading: "Quantitative benchmarks",
         paragraphs: [
-          "We benchmarked the system on 1,000 real-world sample test pairs evaluated across three semantic similarity dimensions against base LLaMA 3.2, phi-2+RAG, and GPT-2 Large:",
+          "We benchmarked the system against base LLaMA 3.2, phi-2 + RAG, and GPT-2 Large across three semantic similarity dimensions. The fine-tuned Jarvis agent with RAG produced the strongest results in every category.",
         ],
+      },
+      {
+        id: "ethics",
+        heading: "Ethical boundaries & safeguards",
+        paragraphs: [
+          "The system incorporates strict ethical boundaries: patient-facing summaries are explicitly separated from full medical diagnoses to prevent self-misinterpretation, and the platform is designed as an assistive tool to empower licensed psychologists rather than operate autonomously.",
+        ],
+        callout:
+          "Research prototype: not validated for clinical use, not deployed for patient care, and not a replacement for professional mental-health support.",
+      },
+      {
+        id: "lessons",
+        heading: "What the project reinforced",
         bullets: [
-          "Cosine Similarity (Sentence Transformers): Jarvis + RAG achieved 0.811 (outperforming base LLaMA 3.2 at 0.636, phi-2+RAG at 0.700, and GPT-2 Large at 0.486).",
-          "LLM-as-a-Judge Semantic Score: Jarvis + RAG scored 0.835 (vs 0.660 base LLaMA 3.2, 0.721 phi-2+RAG, and 0.523 GPT-2 Large).",
-          "WordNet Lexical/Semantic Similarity: Jarvis + RAG reached 0.784 (vs 0.588 base LLaMA 3.2, 0.699 phi-2+RAG, and 0.517 GPT-2 Large).",
-          "Qualitative Findings: Baseline models exhibited transactional, overly analytical, or prematurely diagnostic behavior. In contrast, the fine-tuned Jarvis agent consistently prioritized emotional validation, non-judgmental listening, and collaborative empowerment ('we can work together to heal').",
-        ],
-      },
-      {
-        heading: "Ethical boundaries & clinical safeguards",
-        paragraphs: [
-          "The system incorporates strict ethical boundaries: patient-facing summaries are explicitly separated from full medical diagnoses to prevent self-misinterpretation, and the platform is designed strictly as an assistive tool to empower licensed psychologists rather than operate autonomously.",
+          "Evaluation design matters as much as model choice: the same outputs read differently under cosine, judge, and lexical measures.",
+          "Specialization buys control: each agent has a narrow job and an explicit latency budget.",
+          "Clinical tooling needs boundaries: patient-facing summaries and diagnostic documentation are different products.",
         ],
       },
     ],
   },
 ];
 
-export const MORE_PROJECTS = [
+export const SELECTED_PROJECTS = [
   {
     id: "fmd-store",
     title: "FMD Store",
@@ -340,129 +534,147 @@ export const MORE_PROJECTS = [
     status: "Live",
     statusKind: "production",
     description:
-      "A cash-on-delivery storefront for the Algerian market, written in Algerian Darija: curated student products with variant pickers and image carousels, a bundle offer, WhatsApp ordering, and a checkout funnel backed by 80 pickup points.",
+      "A cash-on-delivery storefront for the Algerian market, written in Algerian Darija: curated student products, variant pickers, a bundle offer, WhatsApp ordering, and a checkout funnel backed by 80 pickup points.",
     image: "fmdStore",
     alt: "FMD Store product preview",
     links: [{ label: "Visit store", url: "https://fmd-store.vercel.app/" }],
-    tags: ["E-commerce", "Darija / Arabic UX", "COD checkout", "Vercel"],
+    tags: ["E-commerce", "Darija UX", "COD checkout", "Vercel"],
+    meta: "Storefront · 80 pickup points",
   },
   {
     id: "fennec-mobile",
-    title: "Fennec Booking Mobile App",
+    title: "Fennec Mobile",
     category: "Mobile · Professional work",
     status: "In production",
     statusKind: "production",
     description:
-      "The platform's Expo/React Native client. My work centered on authentication and session handling: Google OAuth completed through deep links and validated server-side, cookie session injection into the WebView, FCM push notifications, and offline/reconnection states.",
+      "The platform's Expo/React Native client. My work centered on authentication and session handling: Google OAuth through deep links, cookie session injection into the WebView, FCM push notifications, and offline and reconnection states.",
     image: "fennecMobile",
     alt: "Fennec Booking mobile app preview",
-    tags: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-      "Firebase",
-      "Deep linking",
-      "WebView",
-    ],
+    links: [],
+    tags: ["React Native", "Expo", "TypeScript", "Firebase", "Deep linking"],
+    meta: "iOS & Android client",
   },
   {
     id: "medi-care",
-    title: "Medi-Care — Healthcare Appointments API",
+    title: "Medi-Care",
     category: "Backend · API design",
     status: "Completed",
     statusKind: "default",
     description:
-      "Role-based REST API for medical appointments: patient/doctor/admin flows, doctor onboarding with certificate review, appointment slots, bookings, and payment records — on Firebase Auth and Firestore with Cloudinary uploads, fully documented with API docs and a Postman collection.",
+      "Role-based REST API for medical appointments: patient, doctor, and admin flows, doctor onboarding with certificate review, appointment slots, bookings, and payment records on Firebase Auth and Firestore.",
     image: "medicare",
     alt: "Medi-Care healthcare platform preview",
-    links: [
-      { label: "GitHub", url: "https://github.com/S-fetah/medi-care" },
-    ],
+    links: [{ label: "GitHub", url: "https://github.com/S-fetah/medi-care" }],
     tags: ["Fastify", "Firebase Auth", "Firestore", "Cloudinary", "REST"],
+    meta: "API · documented with Postman",
   },
+];
+
+/* Compact archive — every entry gets a row, not equal visual weight. */
+export const ADDITIONAL_PROJECTS = [
   {
     id: "makseb",
-    title: "Makseb — Travel-Agency SaaS",
-    category: "Backend · Product engineering",
+    title: "Makseb",
+    category: "Travel-agency SaaS",
     status: "In development",
-    statusKind: "default",
+    statusKind: "development",
     description:
-      "Multi-tenant backend for Algerian travel-agency websites: subscription plans, template-driven site sections, agency users and roles — a NestJS + Prisma schema designed around agency onboarding.",
+      "Multi-tenant backend for Algerian travel-agency websites: subscription plans, template-driven sections, agency users, and roles — a NestJS + Prisma schema designed around onboarding.",
     image: "makseb",
     alt: "Makseb travel-agency SaaS dashboard preview",
-    tags: ["NestJS", "Prisma", "PostgreSQL", "SaaS", "Multi-tenancy"],
+    tags: ["NestJS", "Prisma", "PostgreSQL", "SaaS"],
   },
   {
     id: "dz-autoimport",
-    title: "DZ-AutoImport — Automotive Showroom",
-    category: "Full-stack product · Concept",
-    status: "Concept",
-    statusKind: "concept",
+    title: "DZ-AutoImport",
+    category: "Automotive showroom",
+    status: "Live prototype",
+    statusKind: "prototype",
     description:
-      "A planned automotive import showroom for the Algerian market: cinematic vehicle presentations, brand and model browsing with specs and availability, 360° media sequences, WhatsApp inquiries, and an admin interface for inventory. Early concept — not yet public.",
+      "A trilingual automotive showroom for the Algerian market: vehicle presentations, brand and model browsing, 360° media, WhatsApp inquiries, and an inventory admin interface. Live as a prototype with demonstration data.",
     image: "autoImport",
     alt: "DZ-AutoImport automotive showroom preview",
+    links: [{ label: "Visit prototype", url: "https://dz-autoimport.vercel.app" }],
     tags: ["Product design", "Automotive", "Lead generation", "Admin CMS"],
   },
   {
     id: "travel-leads",
     title: "Travel-Agency Lead Discovery",
-    category: "Internal tool · Prototype",
+    category: "Internal tool",
     status: "Prototype",
-    statusKind: "concept",
+    statusKind: "prototype",
     description:
-      "Early internal tooling for finding travel-agency prospects: collects travel-related content by country into a structured dataset as the groundwork for area filtering, deduplication, and Excel-exported outreach lists.",
+      "Internal tooling for finding travel-agency prospects: collects travel-related content by country into a structured dataset as groundwork for filtering, deduplication, and Excel-exported outreach lists.",
     image: "travelLeads",
     alt: "Travel-agency lead discovery tool preview",
-    tags: ["Python", "Apify", "Data collection", "Excel export"],
+    links: [],
+    tags: ["Python", "Apify", "Data collection", "Excel"],
   },
-];
-
-/* image: key resolved to an imported asset in Projects.jsx. */
-export const EARLIER_PROJECTS = [
   {
     id: "printing-workshop",
-    title: "Book Printing Shop Website",
+    title: "Book Printing Shop",
+    category: "Client website",
+    status: "Completed",
+    statusKind: "default",
     description:
       "End-to-end MERN website for a book printing shop — storefront UI, backend APIs, and database design delivered for an independent client.",
     image: "printerLibrary",
     alt: "Book printing shop website preview",
-    tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    links: [],
+    tags: ["MongoDB", "Express.js", "React", "Node.js"],
   },
   {
     id: "library-site",
-    title: "Library Management Website",
+    title: "Library Management",
+    category: "Client website",
+    status: "Completed",
+    statusKind: "default",
     description:
       "Full-stack library management website covering catalog UI, backend APIs, and database design for an independent client.",
     image: "library",
     alt: "Library management website preview",
-    tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    links: [],
+    tags: ["MongoDB", "Express.js", "React", "Node.js"],
   },
   {
     id: "driver-app",
-    title: "Driver Mobile App (Backend)",
+    title: "Driver Mobile App",
+    category: "Academic project",
+    status: "Completed",
+    statusKind: "default",
     description:
-      "Backend and server/client CRUD logic for a mobile app helping drivers locate exact places — hotels, mechanics, spare parts, parking, towing — with Google Maps integration.",
+      "Backend and server/client CRUD logic for a mobile app helping drivers locate hotels, mechanics, spare parts, parking, and towing, with Google Maps integration.",
     image: "driver",
     alt: "Driver mobile app preview",
-    tags: ["Node.js", "Express.js", "MongoDB", "React Native", "Google Maps API"],
+    links: [],
+    tags: ["Node.js", "Express.js", "MongoDB", "React Native"],
   },
   {
     id: "offline-maps",
-    title: "Algerian Offline Maps Application",
+    title: "Algerian Offline Maps",
+    category: "Academic project",
+    status: "Completed",
+    statusKind: "default",
     description:
       "JavaScript mapping app for Algeria with location discovery and offline-oriented access to hotels and parking.",
     image: "offlineMaps",
     alt: "Algerian offline maps navigation preview",
+    links: [],
     tags: ["JavaScript", "Mapping", "Offline-first"],
   },
 ];
 
-export const NAV_LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
+export const CASE_STUDY_ROUTES = FEATURED_PROJECTS.reduce((routes, project) => {
+  routes[project.route] = project;
+  return routes;
+}, {});
+
+export const PROJECT_IMAGE_KEYS = Array.from(
+  new Set(
+    [
+      ...SELECTED_PROJECTS.map((project) => project.image),
+      ...ADDITIONAL_PROJECTS.map((project) => project.image),
+    ].filter(Boolean)
+  )
+);

@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/work/fennec-booking",
+      "destination": "/work/fennec-booking/index.html"
+    },
+    {
+      "source": "/work/fennec-booking/",
+      "destination": "/work/fennec-booking/index.html"
+    },
+    {
+      "source": "/work/saha-mind",
+      "destination": "/work/saha-mind/index.html"
+    },
+    {
+      "source": "/work/saha-mind/",
+      "destination": "/work/saha-mind/index.html"
+    }
+  ]
+}
